@@ -12,9 +12,10 @@ export class AppComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  openDialog() {
+  openDialog(element: any) {
     this.dialog.open(AddDialogComponent, {
-      width: '30%'
+      width: '20%',
+      data: element
     });
     this.dialog.afterAllClosed.subscribe(() => {
       window.location.reload();

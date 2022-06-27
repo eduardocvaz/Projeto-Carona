@@ -3,7 +3,7 @@
   </button>
   <span>Projeto Carona</span>
   <span class="example-spacer"></span>
-  <button mat-stroked-button color="accent" (click)="openDialog()">Adicionar Carona</button>
-  <button mat-stroked-button color="accent" (click)="openDialog()">Cadastre-se</button>
+  <button mat-stroked-button color="accent" (click)="openDialog({titulo: 'Adicionar Carona', isCarona: true})">Adicionar Carona</button>
+  <button mat-stroked-button color="accent" (click)="openDialog({titulo: 'Cadastre-se', isCarona: false})" >Cadastre-se</button>
 </mat-toolbar>
 <router-outlet></router-outlet>

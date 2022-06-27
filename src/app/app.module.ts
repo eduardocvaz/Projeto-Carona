@@ -12,12 +12,19 @@ import { AddDialogComponent } from './add-dialog/add-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from "@angular/material/select";
+import { MatInputModule } from '@angular/material/input';
+import { CaronaFormComponent } from './carona-form/carona-form.component';
+import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AddDialogComponent,
+    CaronaFormComponent,
+    UsuarioFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +37,9 @@ import {MatSelectModule} from "@angular/material/select";
     MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
 
   ],
   providers: [],
