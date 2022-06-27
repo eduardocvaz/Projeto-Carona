@@ -1,0 +1,10 @@
+{
+  "caronas": [
+    {
+      "id": 1,
+      "titulo": "carona1",
+      "local_partida": "parnamirim",
+      "local_destino": "lagoa nova"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "caronas": [
+    {
+      "id": 1,
+      "titulo": "carona1",
+      "local_partida": "parnamirim",
+      "local_destino": "lagoa nova",
+      "horario_partida": "12h32",
+      "horario_chegada": "13h32",
+      "ajuda_combustivel" : true,
+      "usuario" : 1
+    },
+
+    {
+      "id": 2,
+      "titulo": "carona2",
+      "local_partida": "candelária",
+      "local_destino": "lagoa nova",
+      "horario_partida": "8h18",
+      "horario_chegada": "8h24",
+      "ajuda_combustivel" : false,
+      "usuario" : 2
+    },
+
+    {
+      "id": 3,
+      "titulo": "carona3",
+      "local_partida": "lagoa nova",
+      "local_destino": "alecrim",
+      "horario_partida": "21h35",
+      "horario_chegada": "22h15",
+      "ajuda_combustivel" : true,
+      "usuario" : 3
+    }
+  ],
+
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "João",
+      "telefone": 32323232,
+      "email": "joao@gmail.com",
+      "senha": "12345678"
+    },
+
+    {
+      "id": 2,
+      "nome": "Maria",
+      "telefone": 32000000,
+      "email": "maria@gmail.com",
+      "senha": "87654321"
+    },
+
+    {
+      "id": 3,
+      "nome": "Pedro",
+      "telefone": 32111111,
+      "email": "pedro@gmail.com",
+      "senha": "13579"
+    }
+  ]
+}
