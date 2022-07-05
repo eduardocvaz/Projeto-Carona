@@ -1,12 +1,4 @@
 <h1 mat-dialog-title>{{Titulo}}</h1>
-<div mat-dialog-content>
-  <app-carona-form></app-carona-form>
-</div>
-<div>
-  <div mat-dialog-action [align]="'end'">
-    <button mat-stroked-button mat-dialog-close>Cancelar</button>
-    <button style="margin-left: 8px" mat-raised-button color="primary">
-      {{isCarona ? "Salvar" : "Cadastrar"}}
-    </button>
-  </div>
-</div>
+
+<div *ngIf="isCarona; else elseBlock"><app-carona-form></app-carona-form></div>
+<ng-template #elseBlock><app-usuario-form></app-usuario-form></ng-template>

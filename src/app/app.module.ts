@@ -17,7 +17,9 @@ import { CaronaFormComponent } from './carona-form/carona-form.component';
 import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from "@angular/material/core";
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,10 @@ import {MatNativeDateModule} from "@angular/material/core";
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    HttpClientModule,
 
   ],
   providers: [],

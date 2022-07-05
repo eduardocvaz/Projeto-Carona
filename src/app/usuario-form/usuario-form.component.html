@@ -1,1 +1,44 @@
-<p>usuario-form works!</p>
+<div mat-dialog-content>
+  <form [formGroup]="usuarioForm">
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Nome Completo</mat-label>
+      <input formControlName="nome" matInput placeholder="Digite seu nome..." />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Telefone</mat-label>
+      <input formControlName="telefone" matInput placeholder="Digite seu telefone..." />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Data de nascimento</mat-label>
+      <input formControlName="dataNascimento" matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>E-mail</mat-label>
+      <input formControlName="email" matInput placeholder="Digite seu email..." />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Senha</mat-label>
+      <input formControlName="senha" matInput type="password" placeholder="Digite sua senha..." />
+    </mat-form-field>
+  </p>
+</form>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-stroked-button mat-dialog-close>Cancelar</button>
+  <button style="margin-left: 8px" mat-raised-button color="primary" (click)="addUsuario()">
+    Salvar
+  </button>
+</div>
