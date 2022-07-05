@@ -8,5 +8,5 @@ export interface Carona {
   horario_partida: string;
   horario_chegada: string;
   ajudaCombustivel: boolean;
-  usuario: Usuario;
+  usuario: String;
 }

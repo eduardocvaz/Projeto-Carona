@@ -1,7 +1,7 @@
-import { UsuarioService } from './../dashboard/services/usuario.service';
+import { CaronaService } from './../dashboard/services/carona.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Usuario } from '../dashboard/model/usuario';
+import { Carona } from '../dashboard/model/carona';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -14,20 +14,24 @@ export class CaronaFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private _snackBar: MatSnackBar,
-    private usuarioService: UsuarioService,
+    private caronaService: CaronaService,
     ) { }
 
 
-  usuarioForm!: FormGroup;
+  caronaForm!: FormGroup;
 
 
-  addUsuario() {
-    if (this.usuarioForm.valid) {
-      const usuario = this.usuarioForm.getRawValue() as Usuario;
-      this.usuarioService.post(usuario).subscribe({
+  addCarona() {
+    if (this.caronaForm.valid) {
+      const carona = this.caronaForm.getRawValue() as Carona;
+      carona.usuario = "padrão";
+      this.caronaService.post(carona).subscribe({
+        complete(): void {
+        }, error(err: any): void {
+        },
         next: () => {
           this.openSnackBar('Usuário cadastrado com sucesso!', 'OK');
-          this.usuarioForm.reset();
+          this.caronaForm.reset();
         }
       });
     }
@@ -39,12 +43,13 @@ export class CaronaFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.usuarioForm = this.formBuilder.group({
-      nome: ['', Validators.required],
-      telefone: ['', Validators.required],
-      dataNascimento: ['', Validators.required],
-      email: ['', Validators.required],
-      senha: ['', Validators.required],
+    this.caronaForm = this.formBuilder.group({
+      titulo: ['', Validators.required],
+      localPartida: ['', Validators.required],
+      localDestino: ['', Validators.required],
+      horarioPartida: ['', Validators.required],
+      horarioChegada: ['', Validators.required],
+      isAjuda: ['', Validators.required]
     });
   }
 

@@ -25,6 +25,9 @@ export class UsuarioFormComponent implements OnInit {
     if (this.usuarioForm.valid) {
       const usuario = this.usuarioForm.getRawValue() as Usuario;
       this.usuarioService.post(usuario).subscribe({
+        complete(): void {
+        }, error(err: any): void {
+        },
         next: () => {
           this.openSnackBar('Usuário cadastrado com sucesso!', 'OK');
           this.usuarioForm.reset();

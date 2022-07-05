@@ -15,6 +15,7 @@ export class AppComponent {
   openDialog(element: any) {
     this.dialog.open(AddDialogComponent, {
       width: '20%',
+      height: '80%',
       data: element
     });
     this.dialog.afterAllClosed.subscribe(() => {

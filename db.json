@@ -29,6 +29,16 @@
       "horario_chegada": "22h15",
       "ajuda_combustivel": true,
       "usuario": 3
+    },
+    {
+      "titulo": "asdasd",
+      "localPartida": "asdsad",
+      "localDestino": "dasd",
+      "horarioPartida": "asda",
+      "horarioChegada": "sdasd",
+      "isAjuda": true,
+      "usuario": "padrão",
+      "id": 4
     }
   ],
   "usuario": [
@@ -60,6 +70,14 @@
       "email": "sadasd",
       "senha": "asdasd",
       "id": 4
+    },
+    {
+      "nome": "asdsa",
+      "telefone": "123123213",
+      "dataNascimento": "2022-06-27T03:00:00.000Z",
+      "email": "sadasd",
+      "senha": "asdasd",
+      "id": 5
     }
   ]
 }
