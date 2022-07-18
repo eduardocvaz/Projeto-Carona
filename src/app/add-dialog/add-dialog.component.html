@@ -1,4 +1,5 @@
 <h1 mat-dialog-title>{{Titulo}}</h1>
-
+<div>
 <div *ngIf="isCarona; else elseBlock"><app-carona-form></app-carona-form></div>
 <ng-template #elseBlock><app-usuario-form></app-usuario-form></ng-template>
+</div>

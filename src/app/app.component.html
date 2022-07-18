@@ -7,3 +7,56 @@
   <button mat-stroked-button color="accent" (click)="openDialog({titulo: 'Cadastre-se', isCarona: false})" >Cadastre-se</button>
 </mat-toolbar>
 <router-outlet></router-outlet>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="titulo">
+    <th mat-header-cell *matHeaderCellDef> Titulo. </th>
+    <td mat-cell *matCellDef="let element"> {{element.titulo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="local_destino">
+    <th mat-header-cell *matHeaderCellDef> Destino. </th>
+    <td mat-cell *matCellDef="let element"> {{element.local_destino}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="local_partida">
+    <th mat-header-cell *matHeaderCellDef> Partida. </th>
+    <td mat-cell *matCellDef="let element"> {{element.local_partida}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="horario_partida">
+    <th mat-header-cell *matHeaderCellDef> Horario Partida </th>
+    <td mat-cell *matCellDef="let element"> {{element.horario_partida}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="horario_chegada">
+    <th mat-header-cell *matHeaderCellDef> Horario Chegada </th>
+    <td mat-cell *matCellDef="let element"> {{element.horario_chegada}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ajudaCombustivel">
+    <th mat-header-cell *matHeaderCellDef> Ajuda Combustivel? </th>
+    <td mat-cell *matCellDef="let element"> {{element.ajudaCombustivel ? 'Sim' : 'Não'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="usuarioNome">
+    <th mat-header-cell *matHeaderCellDef> Nome. </th>
+    <td mat-cell *matCellDef="let element"> {{element.usuario.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="usuarioTelefone">
+    <th mat-header-cell *matHeaderCellDef> Telefone. </th>
+    <td mat-cell *matCellDef="let element"> {{ element.usuario.telefone }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+

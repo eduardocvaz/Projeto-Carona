@@ -20,4 +20,12 @@ export class UsuarioService {
       delay(1000)
     );
   }
+
+  list() {
+    return this.httpClient.get<Usuario[]>(this.url)
+      .pipe(
+        first(),
+        tap(console.log)
+      );
+  }
 }
